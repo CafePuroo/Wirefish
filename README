@@ -1,0 +1,24 @@
+# Wirephish
+
+## Descrição
+Sistema de monitoramento de tráfego de rede
+
+## Construir
+Para construir a aplicação, siga os passos abaixo
+
+~~~bash
+git clone <>
+~~~
+~~~bash
+cd <nome_pasta>
+~~~
+
+### Tecnologias
+- Php 8.0
+- Mysql 8.0
+- Apache 2
+
+# Licença
+
+
+
