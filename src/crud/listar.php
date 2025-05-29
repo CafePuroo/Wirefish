@@ -1,9 +1,12 @@
 <?php
 include 'db.php';
-$result = $conn->query("SELECT * FROM pacotes ORDER BY id DESC");
-$data = [];
+
+$result = $conn->query("SELECT * FROM PACOTES");
+$pacotes = [];
+
 while ($row = $result->fetch_assoc()) {
-  $data[] = $row;
+    $pacotes[] = $row;
 }
-echo json_encode($data);
+
+echo json_encode($pacotes);
 ?>
