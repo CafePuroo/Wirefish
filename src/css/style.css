@@ -1,1 +1,13 @@
-body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 0; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #2c3e50;
+}
+.section-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,13 @@
+fetch('dashboard_dados.php')
+  .then(response => response.json())
+  .then(data => {
+    // Atualiza o gráfico de protocolos
+    protocolChart.data.labels = Object.keys(data.protocolos);
+    protocolChart.data.datasets[0].data = Object.values(data.protocolos);
+    protocolChart.update();
+
+    // Atualiza o gráfico de IPs de origem
+    srcChart.data.labels = Object.keys(data.src_ips);
+    srcChart.data.datasets[0].data = Object.values(data.src_ips);
+    srcChart.update();
+  });
