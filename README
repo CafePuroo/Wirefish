@@ -1,22 +1,35 @@
 # Wirephish
 
 ## Descrição
-Sistema de monitoramento de tráfego de rede
+Sistema de monitoramento de tráfego de rede com base no wireshark como módulo base
 
 ## Construir
-Para construir a aplicação, siga os passos abaixo
+Para construir a aplicação, siga os passos abaixo 
+</br>
 
+1. baixe o projeto em uma pasta
 ~~~bash
 git clone <>
-~~~
+~~~ 
+</br> 
+2. acesse o projeto baixado
+
 ~~~bash
 cd <nome_pasta>
+~~~
+</br>
+3. Instale as dependências necesárias
+
+~~~bash
+cd .. && cd resources
+sudo sh install.sh
 ~~~
 
 ### Tecnologias
 - Php 8.0
 - Mysql 8.0
 - Apache 2
+- thark (WireShak via bash)
 
 # Licença
 
