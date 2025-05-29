@@ -15,7 +15,6 @@ CREATE TABLE usuarios (
   senha VARCHAR(255) NOT NULL
 );
 
-
 -- Inserindo um usuário de teste (senha: 1234)
 INSERT INTO usuarios (usuario, senha)
-VALUES ('admin', SHA2('1234', 256));
+VALUES ('admin', SHA2('adminmaster', 256));
