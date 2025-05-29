@@ -1,6 +1,7 @@
-CREATE DATABASE monitor_pacotes;
+CREATE DATABASE IF NOT EXISTS monitor_pacotes;
 USE monitor_pacotes;
 
+-- Tabela de pacotes capturados
 CREATE TABLE IF NOT EXISTS PACOTES (
   id INT AUTO_INCREMENT PRIMARY KEY,
   src_ip VARCHAR(15) NOT NULL,
@@ -9,38 +10,41 @@ CREATE TABLE IF NOT EXISTS PACOTES (
   tamanho INT NOT NULL
 );
 
-CREATE TABLE USUARIOS (
+-- Usuários do sistema
+CREATE TABLE IF NOT EXISTS USUARIOS (
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100),
   email VARCHAR(100) UNIQUE,
   senha_hash VARCHAR(255)
 );
 
-CREATE TABLE CAPTURA (
-    id_captura INT AUTO_INCREMENT PRIMARY KEY,
-    data_hora_inicio DATETIME,
-    interface VARCHAR(50),
-    id_usuario INT,
-    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
+-- Registro de sessões de captura
+CREATE TABLE IF NOT EXISTS CAPTURA (
+  id_captura INT AUTO_INCREMENT PRIMARY KEY,
+  data_hora_inicio DATETIME,
+  interface VARCHAR(50),
+  id_usuario INT,
+  FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id_usuario)
 );
 
-CREATE TABLE FILTRO (
-    id_filtro INT AUTO_INCREMENT PRIMARY KEY,
-    expressao TEXT,
-    id_captura INT,
-    FOREIGN KEY (id_captura) REFERENCES Captura(id_captura)
+-- Filtros utilizados na captura
+CREATE TABLE IF NOT EXISTS FILTRO (
+  id_filtro INT AUTO_INCREMENT PRIMARY KEY,
+  expressao TEXT,
+  id_captura INT,
+  FOREIGN KEY (id_captura) REFERENCES CAPTURA(id_captura)
 );
 
-CREATE TABLE RELATORIO (
-    id_relatorio INT AUTO_INCREMENT PRIMARY KEY,
-    nome_arquivo VARCHAR(100),
-    data_geracao DATETIME,
-    tipo VARCHAR(50),
-    id_captura INT,
-    FOREIGN KEY (id_captura) REFERENCES Captura(id_captura)
+-- Relatórios gerados a partir das capturas
+CREATE TABLE IF NOT EXISTS RELATORIO (
+  id_relatorio INT AUTO_INCREMENT PRIMARY KEY,
+  nome_arquivo VARCHAR(100),
+  data_geracao DATETIME,
+  tipo VARCHAR(50),
+  id_captura INT,
+  FOREIGN KEY (id_captura) REFERENCES CAPTURA(id_captura)
 );
 
-
--- Inserindo um usuário de teste (senha: 1234)
-INSERT INTO usuarios (usuario, senha)
-VALUES ('admin', SHA2('adminmaster', 256));
+-- Inserindo usuário de teste
+INSERT INTO USUARIOS (nome, email, senha_hash)
+VALUES ('Admin', 'admin@wirefish.local', SHA2('adminmaster', 256));
