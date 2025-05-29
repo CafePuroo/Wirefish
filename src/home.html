@@ -1,11 +1,78 @@
-<form id="formUsuario">
-  <input type="text" id="nome" placeholder="Nome completo" required>
-  <input type="email" id="email" placeholder="Email" required>
-  <input type="password" id="senha" placeholder="Senha" required>
-  <button type="submit">Adicionar Usuário</button>
-</form>
-<div class="section-container">
-  <h2>Cadastro de IPs</h2>
-  <p>Acesse o módulo de inserção e visualização de pacotes de rede capturados.</p>
-  <a href="cadastroIP.html">Ir para Cadastro de IPs</a>
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>WireFish - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #2c3e50;
+    }
+    header {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+    }
+    main {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-container {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 20px 0;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    p {
+      margin: 10px 0 20px;
+    }
+    .section-container a {
+      display: inline-block;
+      text-decoration: none;
+      background: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .section-container a:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <header>Bem-vindo ao WireFish</header>
+  <main>
+    <div class="section-container">
+      <h2>Cadastro de IPs</h2>
+      <p>Acesse o módulo de inserção e visualização de pacotes de rede capturados.</p>
+      <a href="cadastroIP.html">Ir para Cadastro de IPs</a>
+    </div>
+    <div class="section-container">
+      <h2>Dashboard / Relatórios</h2>
+      <p>Visualize estatísticas, gráficos e relatórios detalhados da rede monitorada.</p>
+      <a href="dashboard.html">Ir para o Dashboard</a>
+    </div>
+    <div class="section-container">
+      <h2>Gerenciar Usuários</h2>
+      <p>Adicione, liste ou remova usuários do sistema WireFish.</p>
+      <a href="home.html">Gerenciar Usuários</a>
+    </div>
+  </main>
+</body>
+</html>
