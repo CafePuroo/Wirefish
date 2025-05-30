@@ -24,3 +24,4 @@ while ($row = $result2->fetch_assoc()) {
 echo json_encode([
     'protocolos' => $protocolos,
     'src_ips' => $src_ips
+]);
