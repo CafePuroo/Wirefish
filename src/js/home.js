@@ -4,6 +4,13 @@ document.getElementById("formUsuario").addEventListener("submit", function(e) {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
 
+fetch("crud/usuarios.php", {
+  method: "POST",
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: `action=adicionar&nome=${nome}&email=${email}&senha=${senha}`
+})
+fetch("crud/usuarios.php?action=listar")
+
   fetch("backend/usuarios_adicionar.php", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
