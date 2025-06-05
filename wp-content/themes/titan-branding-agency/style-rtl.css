@@ -1,0 +1,206 @@
+/*RTL CSS*/
+
+.wp-block-image img{
+  vertical-align: unset;
+}
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container li a {
+  color: #000;
+}
+.product-img{
+  width: 100%;
+}
+.banner-img{
+  position: relative;
+}
+.banner-box-2 .box-1row {
+  gap: 10px;
+}
+.banner-box-2 {
+  position: absolute;
+  width: 28%;
+  padding: 7px 10px 10px 10px !important;
+  bottom: -200px;
+  right: -2%;
+  box-shadow: 6px 6px 17.5px 0px #00000033;
+}
+.banner-box-1 {
+  position: absolute;
+  width: 9%;
+  padding: 7px 10px 10px 10px !important;
+  top: 30%;
+  left: 7%;
+  box-shadow: 0px 4px 24px 0px #00000029;
+}
+.banner-box-1 .box-1row {
+  gap: 10px;
+  align-items: center !important;
+}
+.wp-site-blocks{
+  padding: 0 !important;
+}
+.product-main img {
+  width: 100%;
+}
+.toggle-icon img {
+  top: -7px;
+  position: relative;
+}
+.slider-banner {
+  gap: 40px;
+}
+footer.wp-block-template-part {
+  margin-top: 0;
+}
+.comment-respond.wp-block-post-comments-form.wp-block-post-comments-form input[type=submit]{
+  color: #fff;
+}
+.sidebar-box .wp-block-search__button svg{
+  fill: #fff;
+}
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  span.wp-block-navigation-item__label {
+    color: #000;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 781px) {
+  .slider-banner{
+    text-align: center;
+  }
+  .slider-banner .wp-block-buttons {
+    justify-content: center;
+  }
+  .banner-box-1 .box-1row {
+    gap: 10px;
+    align-items: center !important;
+    display: flex !important;
+    width: 100%;
+    flex-direction: column !important;
+  }
+  .banner-box-1 .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+    flex-basis: 50% !important;
+  }
+  .banner-box-2 .wp-block-column.is-vertically-aligned-center{
+    flex-basis: 45% !important;
+  }
+}
+ 
+@media screen and (min-width: 782px) and (max-width: 1200px) {
+  .slider-banner{
+    text-align: right !important;
+  }
+  .heading-banner {
+    font-size: 28px !important;
+  }
+  .slider-banner p{
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 800px) {
+  .header-area .wp-container-core-buttons-layout-1.wp-container-core-buttons-layout-1 {
+    justify-content: center;
+  }
+  .search-btn .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper {
+    float: none;
+    justify-content: center;
+  }
+  .searchbox nav {
+    justify-content: center !important;
+  }
+  .header-area h1{
+    text-align: center;
+  }
+  .banner-box-1 .main-wrapper {
+    display: grid !important;
+    grid-template-columns: auto auto !important;
+  }
+  .banner-box-1 {
+    position: relative;
+    width: 39%;
+    height: 65px;
+    margin: 0 auto;
+    left: 0px;
+    display: flex;
+  }
+  .banner-box-2 {
+    width: 65%;
+    margin: 0 auto;
+    text-align: right;
+    position: relative;
+    left: 0;
+    bottom: 0px;
+  }
+  .banner-img figure.wp-block-image.alignright.size-full.is-resized {
+    margin-inline-start: 0em !important;
+  }
+  .product-heading{
+    text-align: center;
+  } 
+  .logo-box {
+    justify-content: center;
+    display: flex;
+  }
+  .menu-box {
+    justify-content: center;
+    display: flex;
+  }
+  .slider-content {
+    padding: 20px 14px;
+  }
+  .admin-bar .wp-block-navigation__responsive-container-close {
+    color: #000;
+    top:15px;
+  }
+  .slider-banner {
+    gap: 20px;
+  }
+  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container{
+    justify-content: center !important;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .slider-main img {
+    background-size: 100% 100% !important;
+    object-fit: fill !important;
+  }
+  .banner-box-2 {
+    width: 44%;
+  }
+  .banner-box-1 {
+    width: 19% !important;
+    left: 8px;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1720px) {
+  .banner-box-2 {
+    width: 34%;
+  }
+  .slider-main img {
+    background-size: 100% 100% !important;
+    object-fit: fill !important;
+  }
+  .banner-box-1 {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 781px) {
+  .banner-box-1 {
+    width: 45% !important;
+    margin: 0 auto;
+    margin-bottom: 20px !important;
+  }
+  .searchbox nav ul{
+    justify-content: center !important;
+  }
+  .product-main {
+    display: grid !important;
+    grid-template-columns: auto auto !important;
+  }
+  .banner-box-2 {
+    width: 46%;
+    margin: 0 auto;
+  }
+}
+
+.wc-block-mini-cart.wp-block-woocommerce-mini-cart,.wp-block-woocommerce-customer-account {
+  display: none;
+}

@@ -1,0 +1,253 @@
+/*
+Theme Name: Titan Branding Agency
+Theme URI: https://www.titanthemes.net/products/free-branding-wordpress-theme
+Author: Titan Themes
+Author URI: https://www.titanthemes.net/
+Description: The Titan Branding Agency WordPress theme is a sophisticated, multipurpose platform tailored for marketing and branding professionals, offering all the essential tools to build a strong online presence. Ideal for digital marketing agencies, advertising firms, SEO experts, and creative marketing agencies, this theme is designed to showcase your services and expertise in a professional and visually engaging manner. Whether you specialize in content marketing, PPC campaigns, social media management, or email marketing, Titan Branding Agency provides customizable sections to present your services, case studies, and client testimonials. The sleek, modern design is complemented by high-quality imagery, engaging banners, and dynamic call-to-action buttons, ensuring your site is both aesthetically appealing and user-friendly. Fully responsive, the theme ensures seamless functionality across all devices, making it perfect for businesses focusing on mobile marketing, eCommerce, and digital branding. With built-in options for video marketing, the theme enables you to effectively communicate your brand strategy and drive user engagement. It also features SEO optimization tools to enhance visibility, content management solutions to streamline operations, and an intuitive interface that supports better conversion rates. Perfect for a wide range of businesses, including performance marketing agencies, social media consultants, content creation firms, branding specialists, web design agencies, PPC campaign managers, SEO consultancies, email marketing professionals, influencer marketing agencies, and eCommerce marketing experts, the Titan Branding Agency theme combines elegance, functionality, and versatility, making it the ultimate choice for any marketing consultancy looking to make a powerful impact online.
+Requires at least: 6.1
+Tested up to: 6.8
+Requires PHP: 7.2
+Version: 2.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: titan-branding-agency
+Tags: one-column, custom-background, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, wide-blocks, block-styles, style-variations, blog, photography, portfolio
+*/
+
+.wp-block-image img{
+  vertical-align: unset;
+}
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container li a {
+  color: #000;
+}
+.product-img{
+  width: 100%;
+}
+.banner-img{
+  position: relative;
+}
+.banner-box-2 .box-1row {
+  gap: 10px;
+}
+.banner-box-2 {
+  position: absolute;
+  width: 28%;
+  padding: 7px 10px 10px 10px !important;
+  bottom: -200px;
+  left: -2%;
+  box-shadow: -6px 6px 17.5px 0px #00000033;
+}
+.banner-box-1 {
+  position: absolute;
+  width: 9%;
+  padding: 7px 10px 10px 10px !important;
+  top: 30%;
+  right: 7%;
+  box-shadow: 0px 4px 24px 0px #00000029;
+}
+.banner-box-1 .box-1row {
+  gap: 10px;
+  align-items: center !important;
+}
+.wp-site-blocks{
+	padding: 0 !important;
+}
+.product-main img {
+  width: 100%;
+}
+.toggle-icon img {
+  top: -7px;
+  position: relative;
+}
+.slider-banner {
+  gap: 40px;
+}
+footer.wp-block-template-part {
+  margin-top: 0;
+}
+.comment-respond.wp-block-post-comments-form.wp-block-post-comments-form input[type=submit]{
+  color: #fff;
+}
+.sidebar-box .wp-block-search__button svg{
+  fill: #fff;
+}
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  span.wp-block-navigation-item__label {
+    color: #000;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 781px) {
+  .slider-banner{
+    text-align: center;
+  }
+  .slider-banner .wp-block-buttons {
+    justify-content: center;
+  }
+  .banner-box-1 .box-1row {
+    gap: 10px;
+    align-items: center !important;
+    display: flex !important;
+    width: 100%;
+    flex-direction: column !important;
+  }
+  .banner-box-1 .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+    flex-basis: 50% !important;
+  }
+  .banner-box-2 .wp-block-column.is-vertically-aligned-center{
+    flex-basis: 45% !important;
+  }
+}
+ 
+@media screen and (min-width: 782px) and (max-width: 1200px) {
+  .slider-banner{
+    text-align: left !important;
+  }
+  .heading-banner {
+    font-size: 28px !important;
+  }
+  .slider-banner p{
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 800px) {
+	.header-area .wp-container-core-buttons-layout-1.wp-container-core-buttons-layout-1 {
+		justify-content: center;
+	}
+  .search-btn .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper {
+    float: none;
+    justify-content: center;
+  }
+  .searchbox nav {
+    justify-content: center !important;
+  }
+  .header-area h1{
+    text-align: center;
+  }
+  .banner-box-1 .main-wrapper {
+    display: grid !important;
+    grid-template-columns: auto auto !important;
+  }
+  .banner-box-1 {
+    position: relative;
+    width: 39%;
+    height: 65px;
+    margin: 0 auto;
+    right: 0px;
+    display: flex;
+  }
+  .banner-box-2 {
+    width: 65%;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    right: 0;
+    bottom: 0px;
+  }
+  .banner-img figure.wp-block-image.alignright.size-full.is-resized {
+    margin-inline-start: 0em !important;
+  }
+  .product-heading{
+    text-align: center;
+  } 
+  .logo-box {
+    justify-content: center;
+    display: flex;
+  }
+  .menu-box {
+    justify-content: center;
+    display: flex;
+  }
+  .slider-content {
+    padding: 20px 14px;
+  }
+  .admin-bar .wp-block-navigation__responsive-container-close {
+    color: #000;
+    top:15px;
+  }
+  .slider-banner {
+    gap: 20px;
+  }
+  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container{
+    justify-content: center !important;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .slider-main img {
+    background-size: 100% 100% !important;
+    object-fit: fill !important;
+  }
+  .banner-box-2 {
+    width: 44%;
+  }
+  .banner-box-1 {
+    width: 19% !important;
+    right: 8px;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1720px) {
+  .banner-box-2 {
+    width: 34%;
+  }
+  .slider-main img {
+    background-size: 100% 100% !important;
+    object-fit: fill !important;
+  }
+  .banner-box-1 {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 781px) {
+  .banner-box-1 {
+    width: 45% !important;
+    margin: 0 auto;
+    margin-bottom: 20px !important;
+  }
+  .searchbox nav ul{
+    justify-content: center !important;
+  }
+  .product-main {
+    display: grid !important;
+    grid-template-columns: auto auto !important;
+  }
+  .banner-box-2 {
+    width: 46%;
+    margin: 0 auto;
+  }
+}
+
+.wc-block-mini-cart.wp-block-woocommerce-mini-cart,.wp-block-woocommerce-customer-account {
+  display: none;
+}
+
+/*back to top*/
+.wp-block-button.scroll-to-top .wp-block-button__link.wp-element-button {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  display: inline-block;
+  z-index: 1;
+  text-indent: -5000px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.089);
+  display: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.wp-block-button.scroll-to-top .wp-block-button__link.wp-element-button:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  -webkit-mask-image: url(assets/images/up-arrow.svg);
+  mask-image: url(assets/images/up-arrow.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+}
