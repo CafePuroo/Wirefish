@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciar Usuários - WireFish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      padding: 12px;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    table {
+      width: 100%;
+      margin-top: 30px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciar Usuários</h1>
+    <form id="formUsuario">
+      <input type="text" id="nome" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit">Adicionar Usuário</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaUsuarios"></tbody>
+    </table>
+  </div>
+
+  <script>
+    document.getElementById("formUsuario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      fetch("crud/usuarios.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `action=adicionar&nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`
+      }).then(res => res.json())
+        .then(() => {
+          document.getElementById("formUsuario").reset();
+          listarUsuarios();
+        });
+    });
+
+    function listarUsuarios() {
+      fetch("crud/usuarios.php?action=listar")
+        .then(res => res.json())
+        .then(data => {
+          const tabela = document.getElementById("tabelaUsuarios");
+          tabela.innerHTML = "";
+          data.forEach(u => {
+            tabela.innerHTML += `
+              <tr>
+                <td>${u.id_usuario}</td>
+                <td>${u.nome}</td>
+                <td>${u.email}</td>
+                <td><button onclick="excluirUsuario(${u.id_usuario})">Excluir</button></td>
+              </tr>
+            `;
+          });
+        });
+    }
+
+    function excluirUsuario(id) {
+      if (!confirm("Deseja excluir este usuário?")) return;
+
+      fetch("crud/usuarios.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `action=excluir&id_usuario=${id}`
+      }).then(() => listarUsuarios());
+    }
+
+    listarUsuarios();
+  </script>
+</body>
+</html>
